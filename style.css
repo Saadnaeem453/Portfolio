@@ -1,175 +1,350 @@
-*{
-    box-sizing:0;
-    margin:0;
-    padding:0;
-    font-style:arial;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
-body{
+
+body {
     min-height: 100vh;
     min-width: 100vw;
+
     overflow-x: hidden;
 }
-::-webkit-scrollbar{
-width:6px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: #0d6efd;
+
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-a{
-    text-decoration:none;
+::-webkit-scrollbar-thumb {
+    background-color: #06d7a0;
 }
-.home{
-background: linear-gradient(to top, #ebebf0 60%, #f2f2f7);
+
+a {
+    text-decoration: none;
 }
-.services_wrapper{
+
+.dynamicText {
+    color: #00b585
+}
+
+.navbarBg {
+    background: linear-gradient(112.1deg, rgb(21, 25, 39) 11.4%, rgb(6, 11, 8) 70.2%);
+}
+
+.gradientBtn {
+    background: linear-gradient(to right, #00b585, #029870);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    transition: scale 0.6s ease;
+
+}
+
+.gradientBtn:hover {
+    box-shadow: 0 4px 17px rgba(6, 215, 160, 0.75);
+    scale: 1.05
+}
+
+.home,
+.services_wrapper,
+.contact {
     background: linear-gradient(to top, #ebebf0 60%, #f2f2f7);
 }
-.contact{
-    background: linear-gradient(to top, #ebebf0 60%, #f2f2f7);
+
+
+.redc {
+    background-image: linear-gradient(to right, #85d9c3, #008662);
+    color: transparent;
+    -webkit-background-clip: text;
 }
-.redc{
-    background-image:linear-gradient(to right,  #FD4766 ,#0d6efd);
-    color:transparent;
-    -webkit-background-clip:text;
+
+.ullinks {
+    z-index: 99;
 }
+
 .nav-item:hover i {
-    transform: scale(1.3); 
+    transform: scale(1.3);
     transition: transform 0.3s ease-in-out;
 }
-.gradient-text{
-background-image:linear-gradient(to right,  #FD4766 ,#0d6efd);
-color:transparent;
--webkit-background-clip: text;
-}
-.htext{
-    font-family: 'Dancing Script', cursive;
-    font-size:50px;
-}
-p{
-    font-size:22px;
-}
-.name{
-    font-size:55px;
-    font-weight:600;
-}
-.hireme:hover{
-    background:white;
-    color:blue;
 
-}
-.pimage{
-    border-radius:49% 51% 47% 53% / 30% 30% 70% 70% ;
-}
-.navbar-nav .nav-link{
-    font-size:18px;
-    font-weight:500;
-}
-.navbar-nav .nav-link::after{
-    content:'';
-    width:0%;
-    height:5px;
-    background:#0d6efd;
-    display:block;
-    margin:auto;
-transition:0.4s;
-}
-.navbar-nav .nav-link:hover::after{
-    width:100%;
-}
-.about ul.nav-pills{
-    border:1px solid #FD4766; 
-border-radius:50px;
-}
-.about ul li .nav-link{
-    border-radius:50px;
-    font-size:15px;
-    font-weight:500;
-    transition:all 0.45s cubic-bezier(0,0,0.2,1);
-    display:inline-block;
-    color:grey;
-    border:0;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-.about ul li .nav-link.active{
-    background-color:#FD4766; 
-
-}
-.about .single-progress{
-    margin-top:30px;
-    position:relative;
-    overflow:hidden ;
-     letter-spacing:1px;
-}
-.about .single-progress .progress{
-    height:6px;
-    border-radius:4px;
-    box-shadow:0px;
-
-    overflow:visible;
-}
-.about .single-progress .progress-bar{
-    background-image:linear-gradient(to right,#0d6efd, #FD4766 );
-
-}
-.about .single-progress .label{
-    position:absolute;
-    top:0;
-    right:0;
-    font-size:15px;
-    color: #FD4766;
+.gradient-text {
+    background-image: linear-gradient(to right, #005841, #06d7a0);
+    color: transparent;
+    -webkit-background-clip: text;
 }
 
-.services_wrapper .card{
-    background:rgb(4, 0, 48);
+.green {
+    color: #06d7a0;
+}
+
+
+.green .sm {
+    margin-right: 15px;
+    /* Adds gap between list items */
+}
+
+.green .sm:last-child {
+    margin-right: 0;
+    /* Removes the margin on the last item */
+}
+
+.green a {
+    color: inherit;
+    /* Ensures the icons inherit the text color */
+    text-decoration: none;
+    transition: scale 0.3s ease
+}
+
+.green a:hover {
+    box-shadow: 0 4px 17px rgba(6, 215, 160, 0.75);
+    scale: 1.05
+        /* Optional: Changes color on hover */
+}
+
+.green i {
+    font-size: 1.5rem;
+    /* Adjust icon size */
+}
+
+.psize {
+    font-size: 1.2rem;
+}
+
+.htext {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 22px;
+}
+
+.navbar,
+.home,
+.services_wrapper,
+.portfolio_wrapper,
+.stack,
+.contact {
+    background: linear-gradient(112.1deg, rgb(21, 25, 39) 11.4%, rgb(6, 11, 8) 70.2%);
+}
+
+.about {
+    background: linear-gradient(112.1deg, rgb(21, 25, 39) 11.4%, rgb(6, 11, 8) 70.2%);
+}
+
+.name {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.hireme:hover {
+    background: white;
+    color: #06d7a0;
+}
+
+.pimage {}
+
+.home-img {
+    max-width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+.pimage {
+    border-radius: 49% 51% 47% 53% / 30% 30% 70% 70%;
+    width: 100%;
+
+    height: auto;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.float-end {
+    float: right;
+    /* Keeps the image floated to the right */
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    width: 0%;
+    height: 5px;
+    background: #06d7a0;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.about ul.nav-pills {
+    border: 1px solid #06d7a0;
+    border-radius: 50px;
+}
+
+.about ul li .nav-link {
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
+    display: inline-block;
+    color: grey;
+    border: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about ul li .nav-link.active {
+    background-color: #06d7a0;
+}
+
+.about .single-progress {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.about .single-progress .progress {
+    height: 6px;
+    border-radius: 4px;
+    box-shadow: 0px;
+    overflow: visible;
+}
+
+.about .single-progress .progress-bar {
+    background-image: linear-gradient(to right, #06d7a0, #64b3e0);
+}
+
+.about .single-progress .label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    color: #06d7a0;
+}
+
+.services_wrapper .card {
+    background: rgb(4, 0, 48);
     cursor: pointer;
-    transition:transform 0.65s cubic-bezier(0.05, 0.2 , 0.1 ,1);
-    box-shadow:0.65s cubic-bezier(0.05, 0.2 , 0.1 ,1);
+    transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
 }
-.services_wrapper .card:hover{
-    box-shadow:0px 2px 70px 0px rgb(253 71 102 / 5%);
-    transform:translateY(-5px);
+
+.services_wrapper .card:hover {
+    box-shadow: 0px 2px 70px 0px rgb(253 71 102 / 5%);
+    transform: translateY(-5px);
 }
-.services_wrapper .card .card-body{
-    color:white;
+
+.services_wrapper .card:hover {
+    box-shadow: 0px 2px 70px 0px rgb(253 71 102 / 5%);
+    transform: translateY(-5px);
 }
-/* --------------portfolio--------- */
-.portfolio_wrapper .card{
-    height:100%;
+
+.services_wrapper .card .card-body {
+    color: white;
+}
+
+.portfolio_wrapper .card {
+    height: 100%;
     min-height: 350px;
-    overflow:hidden;
+    overflow: hidden;
     border: 1px solid white;
     cursor: pointer;
-    box-shadow:0 0 6px 2px rgb(178, 181, 235);
-
-}
-.portfolio_wrapper .card span{
-    transition:background-position 4s ease-in-out 0s;
-    width:100%;
-    height:100%;
-    background-position:top center;
-    background-size:cover;
-}
-.portfolio_wrapper .card:hover span{
-    background-position:bottom center ;
+    box-shadow: 0 0 6px 2px rgb(178, 181, 235);
 }
 
-@media ( max-width:991px){
-    .about ul.nav-pills{
-        width:56.1%;
-        margin:auto;
+.portfolio_wrapper .card span {
+    transition: background-position 4s ease-in-out 0s;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.portfolio_wrapper .card:hover span {
+    background-position: bottom center;
+}
+
+.contact-form {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.form-control:focus {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #888;
+}
+
+.hr {
+    width: 65px;
+    color: #06d7a0;
+    padding: 2px;
+    opacity: 100%;
+    margin-top: 0;
+}
+
+.btn-custom {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+.btn-custom:hover {
+    background-color: #357ab7;
+}
+
+@media (max-width: 991px) {
+    .about ul.nav-pills {
+        width: 56.1%;
+        margin: auto;
     }
-    .portfolio_wrapper .card{
-        min-height:500px;
-    }
 
+    .portfolio_wrapper .card {
+        min-height: 500px;
+    }
 }
 
-@media ( max-width: 767px){
-    .about ul.nav-pills{
-        width:100%;
-        margin:auto;
-        border:0;
+@media (max-width: 767px) {
+
+    .about ul.nav-pills {
+        width: 100%;
+        margin: auto;
+        border: 0;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+        /* Adjust as needed */
+    }
+
+    .name {
+        font-size: 35px;
+        font-weight: 500;
     }
 }
